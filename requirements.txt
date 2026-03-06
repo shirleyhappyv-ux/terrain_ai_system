@@ -4,4 +4,3 @@ numpy
 pillow
 folium
 streamlit-folium
-scikit-image
