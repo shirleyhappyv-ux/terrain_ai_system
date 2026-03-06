@@ -5,5 +5,3 @@ pillow
 folium
 streamlit-folium
 scikit-image
-networkx
-plotly
