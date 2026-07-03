@@ -1,6 +1,0 @@
-streamlit
-opencv-python-headless
-numpy
-pillow
-folium
-streamlit-folium
