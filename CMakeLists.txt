@@ -6,13 +6,20 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-# 包含 QGIS 核心与 GUI 头文件路径
-include_directories(/usr/include/qgis)
+# 查找 Qt5 核心模块，新加了 Svg 模块
+find_package(Qt5 COMPONENTS Core Gui Widgets Xml Svg REQUIRED)
 
-find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
+# 查找 GDAL 依赖
 find_package(GDAL REQUIRED)
 
-# 显式链接 Ubuntu 系统下的 QGIS 共享动态库
+
+include_directories(
+    /usr/include/qgis
+    ${GDAL_INCLUDE_DIR}
+)
+# =============================================================
+
+# QGIS 核心动态库
 set(QGIS_LIBRARIES qgis_core qgis_gui qgis_analysis)
 
 add_executable(GisDynamicClient
@@ -22,9 +29,12 @@ add_executable(GisDynamicClient
     custom_map_tools.cpp
     custom_map_tools.h
 )
-
+ 
 target_link_libraries(GisDynamicClient
     Qt5::Widgets
-    GDAL
+    Qt5::Xml
+    Qt5::Svg
+    ${GDAL_LIBRARIES}
     ${QGIS_LIBRARIES}
 )
+# =============================================================

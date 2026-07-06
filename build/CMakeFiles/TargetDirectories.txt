@@ -1,0 +1,5 @@
+/workspaces/terrain_ai_system/build/CMakeFiles/GisDynamicClient.dir
+/workspaces/terrain_ai_system/build/CMakeFiles/edit_cache.dir
+/workspaces/terrain_ai_system/build/CMakeFiles/rebuild_cache.dir
+/workspaces/terrain_ai_system/build/CMakeFiles/GisDynamicClient_autogen_timestamp_deps.dir
+/workspaces/terrain_ai_system/build/CMakeFiles/GisDynamicClient_autogen.dir

@@ -10,11 +10,25 @@
 #include <cmath>
 #include <algorithm>
 
+
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), mDemDataset(nullptr) {
     setupUserInterface();
-    loadGisDataStacked();
+    loadGisDataStacked(); // 这一步会执行上面的逻辑
+    
     GDALAllRegister();
-    mDemDataset = (GDALDataset*)GDALOpen("./cqdem.tif", GA_ReadOnly);
+    
+    // 🔧 修正点：GDAL 打开文件时，也必须使用绝对路径！
+    QString absoluteDemPath = "/workspaces/terrain_ai_system/cqdem.tif";
+    if (!QFile::exists(absoluteDemPath)) {
+        absoluteDemPath = QCoreApplication::applicationDirPath() + "/../cqdem.tif";
+    }
+    
+    qDebug() << "GDAL 核心引擎正在打开 DEM 绝对路径:" << absoluteDemPath;
+    mDemDataset = (GDALDataset*)GDALOpen(absoluteDemPath.toUtf8().constData(), GA_ReadOnly);
+    
+    if(!mDemDataset) {
+        qDebug() << "GDAL 引擎打开 DEM 失败！";
+    }
 }
 
 MainWindow::~MainWindow() { if(mDemDataset) GDALClose(mDemDataset); }
@@ -84,34 +98,61 @@ void MainWindow::setupUserInterface() {
 }
 
 void MainWindow::loadGisDataStacked() {
-    // 叠加本地 cqdem.tif 栅格和 GeoPackage 20个图层中的核心线要素
-    QString demPath = "./cqdem.tif";
-    QgsRasterLayer* rasterLayer = new QgsRasterLayer(demPath, "ChongQing_DEM", "gdal");
+    // 1. 锁死绝对物理路径
+    QString demPath = "/workspaces/terrain_ai_system/cqdem.tif";
+    QString gpkgBase = "/workspaces/terrain_ai_system/fixed_map_data.gpkg";
     
-    QString gpkgPath = "./fixed_map_data.gpkg|layername=roads"; // 假设路线层为roads
-    mRoadsLayer = new QgsVectorLayer(gpkgPath, "GPKG_Road_Network", "ogr");
+    // 🔧 【硬核破局】根据图片信息，将子图层名字直接锁死为 gis_osm_roads_free
+    QString gpkgPath = gpkgBase + "|layername=gis_osm_roads_free"; 
+
+    qDebug() << "----------------------------------------";
+    qDebug() << "【核心调试】精准指定图层名进行数据加载...";
+    qDebug() << "DEM 路径:" << demPath;
+    qDebug() << "GPKG 完整连接串:" << gpkgPath;
+
+    // 2. 容器防御模式：防止扫描系统字体及加载默认样式引发崩溃
+    QgsRasterLayer::LayerOptions rasterOptions;
+    rasterOptions.loadDefaultStyle = false; 
+    QgsRasterLayer* rasterLayer = new QgsRasterLayer(demPath, "ChongQing_DEM", "gdal", rasterOptions);
+
+    QgsVectorLayer::LayerOptions vectorOptions;
+    vectorOptions.loadDefaultStyle = false;
+    mRoadsLayer = new QgsVectorLayer(gpkgPath, "GPKG_Road_Network", "ogr", vectorOptions);
+
+    // 3. 错误诊断拦截器
+    if (!rasterLayer->isValid()) {
+        qDebug() << "【DEM加载失败】详细原因:" << rasterLayer->error().summary();
+    }
+    if (!mRoadsLayer->isValid()) {
+        qDebug() << "【GPKG道路层加载失败】详细原因:" << mRoadsLayer->error().summary();
+    }
 
     if (!rasterLayer->isValid() || !mRoadsLayer->isValid()) {
-        lblStatus->setText("错误：无法读取 fixed_map_data.gpkg 或 cqdem.tif，请确认路径！");
+        lblStatus->setText("错误：显式 Provider 拒绝解析，请查看终端输出。");
         return;
     }
 
-    // 初始化动态交互临时标绘图层
+    // 4. 创建动态内存标绘图层
     mPlotLayer = new QgsVectorLayer("Point?crs=EPSG:4326&field=id:integer&field=name:string", "Dynamic_Plots", "memory");
     
+    // 5. 组装至项目单例与画布渲染器
     QgsProject::instance()->addMapLayer(rasterLayer);
     QgsProject::instance()->addMapLayer(mRoadsLayer);
     QgsProject::instance()->addMapLayer(mPlotLayer);
 
+    mLayerLayers.clear();
     mLayerLayers.append(mPlotLayer);
-    mLayerLayers.append(mRoadsLayer);
+    mLayerLayers.append(mRoadsLayer); // 14.7万条路网要素将在 DEM 之上完美叠加
     mLayerLayers.append(rasterLayer);
 
     mCanvas->setLayers(mLayerLayers);
     mCanvas->zoomToFullExtent();
     mCanvas->refresh();
-    lblStatus->setText("地图重叠替换成功：矢量网格与高精度栅格DEM已渲染。");
+    
+    lblStatus->setText("地图替换成功：重庆高精度 DEM 与 gis_osm_roads_free 路网已成功重叠渲染！");
+    qDebug() << "【祝贺】GIS 图层树全线挂载成功。";
 }
+
 
 void MainWindow::activateMeasureMode() {
     MapMeasureTool* tool = new MapMeasureTool(mCanvas);
@@ -253,8 +294,16 @@ void MainWindow::generateProfileAndLOS() {
         lblStatus->setText("成功提取GPKG高优先级路线几何。正沿路线等距重采样计算地形起伏剖面...");
         
         // 基于 GDAL 的射线追踪两点遮挡查询
-        QgsPointXY startPt = geom.asLineString().startPoint();
-        QgsPointXY endPt = geom.asLineString().endPoint();
+       QVector<QgsPointXY> polyline = geom.asPolyline();
+
+       if (polyline.isEmpty()) {
+        QMessageBox::warning(this, "提取失败", "该要素的几何类型不是合法的线要素。");
+        return;
+    }
+
+        // 获取起点和终点
+        QgsPointXY startPt = polyline.first();
+        QgsPointXY endPt = polyline.last();
 
         double hStart = queryElevationGDAL(startPt.x(), startPt.y()) + 5.0; // 起点天线加高5米
         double hEnd = queryElevationGDAL(endPt.x(), endPt.y());
