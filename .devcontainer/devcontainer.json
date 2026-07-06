@@ -1,0 +1,12 @@
+{
+    "name": "Terrain AI System Center",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools"
+            ]
+        }
+    },
+    // 🔧 方案 B 核心：容器每次启动时，自动在后台默默拉起全部 VNC、环境依赖以及客户端
+    "postStartCommand": "bash /workspaces/terrain_ai_system/auto_launch_env.sh"
+}

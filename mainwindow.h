@@ -1,53 +1,96 @@
 #pragma once
+
 #include <QMainWindow>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QTableWidget>
+#include <QLabel>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QGridLayout>
+#include <QMessageBox>
+#include <QListWidget>
+
+// QGIS 核心组件
 #include <qgsmapcanvas.h>
 #include <qgsvectorlayer.h>
 #include <qgsrasterlayer.h>
-#include <QLineEdit>
-#include <QDoubleSpinBox>
-#include <QTableWidget>
-#include <QPushButton>
-#include <QLabel>
-#include "gdal_priv.h"
+#include <qgsproject.h>
 
-struct TargetCandidate {
-    int id;
-    double x, y;
-    double slope;      // 准则1：坡度 (极小型)
-    double elevation;  // 准则2：高程 (越接近理想目标越好)
-    double distToRoad; // 准则3：距道路距离 (极小型)
-    double mcdaScore;  // TOPSIS 贴进度得分
+// 自定义工具
+#include "custom_map_tools.h"
+
+// 结构体：存储多图层穿透检索到的候选空间要素元数据
+struct SearchResultFeature {
+    QString featureName;   // 要素真实名称
+    QString layerName;     // 所属图层名称
+    QgsGeometry geometry;  // 空间几何位置
+    QgsFeatureId fid;      // 要素底层的ID
 };
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
+
 public:
     MainWindow(QWidget *parent = nullptr);
-    ~MainWindow() override;
+    ~MainWindow();
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private slots:
-    void activateMeasureMode();
-    void activatePlotMode();
+    // 核心业务
     void executeDynamicMCDASearch();
     void generateProfileAndLOS();
-    void updateStatusBarDistance(double d);
+    void updateStatusBarDistance(double dist);
+    
+    // 地图控制与高级多图层穿透检索
+    void zoomInMap();
+    void zoomOutMap();
+    void activateMeasureTool();
+    void activatePlotTool();
+    void executeAdvancedGlobalSearch(); // 🔧 升级：全图层多结果穿透检索
+    void handleSearchResultSelected(QListWidgetItem* item); // 🔧 新增：二次确认列表点选联动
+    void insertQuickSearchText();
+    void handleTableClicked(int row, int column);
+    void handleMapPointPlotted(const QgsPointXY& point);
 
 private:
-    QgsMapCanvas* mCanvas;
-    QList<QgsMapLayer*> mLayerLayers;
-    QgsVectorLayer* mPlotLayer;
-    QgsVectorLayer* mRoadsLayer;
-    GDALDataset* mDemDataset;
-
-    // 动态交互窗口 UI 控件
-    QDoubleSpinBox* sbMaxSlope;
-    QDoubleSpinBox* sbTargetEle;
-    QDoubleSpinBox* sbMaxRoadDist;
-    QLineEdit* leAhpWeights; // 格式: "0.5,0.3,0.2"
-    QTableWidget* twResultsTable;
-    QLabel* lblStatus;
-
     void setupUserInterface();
     void loadGisDataStacked();
-    double queryElevationGDAL(double x, double y);
+    void addCandidatePointToMap(const QString& id, double lon, double lat, double score, const QString& grade);
+
+    QgsMapCanvas* mCanvas;
+    QgsVectorLayer* mRoadsLayer;
+    QgsVectorLayer* mPlacesLayer;   // 🔧 新增图层指针
+    QgsVectorLayer* mPoisLayer;     // 🔧 新增图层指针
+    QgsVectorLayer* mBuildingsLayer;// 🔧 新增图层指针
+    QgsVectorLayer* mPlotLayer;     // 选址落点层
+    QgsVectorLayer* mSearchMarkLayer;// 🔧 新增：检索精确定位高亮标记层（黄色星号）
+    QList<QgsMapLayer*> mLayerLayers;
+
+    // 工具
+    MapMeasureTool* mMeasureTool;
+    QgsMapToolEmitPoint* mPlotTool;
+
+    // UI 控件
+    QPushButton* btnZoomIn;
+    QPushButton* btnZoomOut;
+    QPushButton* btnMeasure;
+    QPushButton* btnPlot;
+    
+    QLineEdit* leSearchName;
+    QPushButton* btnSearch;
+    QListWidget* listWidgetSearchResults; // 🔧 新增：待用户二次确认的类似结果列表框
+    
+    QLineEdit* leMaxSlope;
+    QLineEdit* leIdealElev;
+    QLineEdit* leMaxDist;
+    QLineEdit* leAhpWeights;
+    
+    QTableWidget* tableWidget;
+    QLabel* lblStatus;
+
+    // 内存数据转换缓存
+    QList<SearchResultFeature> mCurrentFoundFeatures;
 };

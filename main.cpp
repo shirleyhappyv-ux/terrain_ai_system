@@ -1,46 +1,41 @@
 // =================================================================
-// 位置：/workspaces/terrain_ai_system/main.cpp
+// 文件路径：/workspaces/terrain_ai_system/main.cpp
 // =================================================================
 #include <qgsapplication.h>
 #include <qgsproviderregistry.h>
 #include "mainwindow.h"
 #include <QDebug>
-#include <QDir>
 
 int main(int argc, char *argv[]) {
-    // 1. 🔧 终极修正 1：对于带有 Canvas 画布的 GUI 客户端，第三个参数【必须】为 true！
-    // 只有这样，QGIS 才会为地图画布和渲染器分配完整的内存对象。
+    // 1. 启动完整的 GUI 支持型应用程序单例，为 Canvas 画布分配完整的渲染上下文
     QgsApplication app(argc, argv, true); 
     
-    // 2. 🔧 终极修正 2：显式覆盖并锁死系统前缀和插件路径
-    // 根据 Ubuntu 默认 libqgis-dev 安装规范
+    // 2. 锁死 Linux 容器环境下的 QGIS 核心路径与共享插件驱动路径
     QString prefixPath = "/usr";
     QString pluginPath = "/usr/lib/qgis/plugins";
     
     QgsApplication::setPrefixPath(prefixPath, true);
     QgsApplication::setPluginPath(pluginPath);
     
-    // 3. 执行 QGIS 核心单例的底层 C++ 静态对象初始化
+    // 3. 执行核心单例静态对象链式初始化
     QgsApplication::initQgis();
 
-    // 4. 🔧 终极修正 3：显式强行刷新 Provider 注册表，打通 gdal/ogr 插件
+    // 4. 显式刷新全局 Provider 注册表，激活系统的 gdal 与 ogr 动态库
     QgsProviderRegistry::instance(pluginPath);
 
-    // 5. 打印驱动自检信息，确保 "gdal" 和 "ogr" 在列表里
-    QStringList availableProviders = QgsProviderRegistry::instance()->providerList();
+    // 调试打印：确认核心驱动加载状态
     qDebug() << "========================================";
-    qDebug() << "【QGIS 核心单例初始化成功】";
-    qDebug() << "系统可用 GIS 数据驱动列表:";
-    qDebug() << availableProviders;
+    qDebug() << "【QGIS 系统环境初始化成功】";
+    qDebug() << "可用 GIS 数据驱动列表:" << QgsProviderRegistry::instance()->providerList();
     qDebug() << "========================================";
 
-    // 6. 安全拉起主界面（此时基础单例指针均已就绪，绝不会再发生段错误）
+    // 5. 拉起主界面
     MainWindow mainWindow;
     mainWindow.show();
 
     int execCode = app.exec();
     
-    // 7. 退出时安全释放 QGIS 资源
+    // 6. 退出时安全卸载全局 GIS 资源
     QgsApplication::exitQgis();
     return execCode;
 }

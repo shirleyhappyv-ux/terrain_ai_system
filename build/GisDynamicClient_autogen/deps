@@ -142,7 +142,6 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/c++/13/limits \
 	/usr/include/c++/13/list \
 	/usr/include/c++/13/map \
-	/usr/include/c++/13/math.h \
 	/usr/include/c++/13/memory \
 	/usr/include/c++/13/mutex \
 	/usr/include/c++/13/new \
@@ -182,30 +181,6 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/errno.h \
 	/usr/include/features-time64.h \
 	/usr/include/features.h \
-	/usr/include/gdal/cpl_atomic_ops.h \
-	/usr/include/gdal/cpl_config.h \
-	/usr/include/gdal/cpl_conv.h \
-	/usr/include/gdal/cpl_error.h \
-	/usr/include/gdal/cpl_json.h \
-	/usr/include/gdal/cpl_minixml.h \
-	/usr/include/gdal/cpl_multiproc.h \
-	/usr/include/gdal/cpl_port.h \
-	/usr/include/gdal/cpl_progress.h \
-	/usr/include/gdal/cpl_string.h \
-	/usr/include/gdal/cpl_virtualmem.h \
-	/usr/include/gdal/cpl_vsi.h \
-	/usr/include/gdal/gdal.h \
-	/usr/include/gdal/gdal_frmts.h \
-	/usr/include/gdal/gdal_priv.h \
-	/usr/include/gdal/gdal_version.h \
-	/usr/include/gdal/gdalsubdatasetinfo.h \
-	/usr/include/gdal/ogr_api.h \
-	/usr/include/gdal/ogr_core.h \
-	/usr/include/gdal/ogr_feature.h \
-	/usr/include/gdal/ogr_featurestyle.h \
-	/usr/include/gdal/ogr_geometry.h \
-	/usr/include/gdal/ogr_spatialref.h \
-	/usr/include/gdal/ogr_srs_api.h \
 	/usr/include/linux/errno.h \
 	/usr/include/locale.h \
 	/usr/include/pthread.h \
@@ -412,13 +387,9 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
 	/usr/include/x86_64-linux-gnu/bits/sched.h \
 	/usr/include/x86_64-linux-gnu/bits/setjmp.h \
-	/usr/include/x86_64-linux-gnu/bits/stat.h \
-	/usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-	/usr/include/x86_64-linux-gnu/bits/statx.h \
 	/usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
 	/usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
 	/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-	/usr/include/x86_64-linux-gnu/bits/struct_stat.h \
 	/usr/include/x86_64-linux-gnu/bits/syscall.h \
 	/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
 	/usr/include/x86_64-linux-gnu/bits/time.h \
@@ -443,8 +414,6 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
 	/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
 	/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-	/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-	/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
 	/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
 	/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
 	/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
@@ -675,38 +644,49 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtSvg/QSvgRenderer \
 	/usr/include/x86_64-linux-gnu/qt5/QtSvg/qsvgrenderer.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtSvg/qtsvgglobal.h \
-	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGestureEvent \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsEffect \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QUndoStack \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgesture.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicseffect.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
-	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
@@ -724,12 +704,10 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtXml/qtxml-config.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtXml/qtxmlglobal.h \
 	/usr/include/x86_64-linux-gnu/sys/cdefs.h \
-	/usr/include/x86_64-linux-gnu/sys/stat.h \
 	/usr/include/x86_64-linux-gnu/sys/syscall.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-	/usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
