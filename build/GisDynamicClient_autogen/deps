@@ -198,21 +198,15 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/qgis/qgsattributes.h \
 	/usr/include/qgis/qgsattributetableconfig.h \
 	/usr/include/qgis/qgsbox3d.h \
-	/usr/include/qgis/qgscolorramp.h \
-	/usr/include/qgis/qgscolorrampimpl.h \
-	/usr/include/qgis/qgscolorramplegendnodesettings.h \
-	/usr/include/qgis/qgscolorrampshader.h \
 	/usr/include/qgis/qgscolorscheme.h \
 	/usr/include/qgis/qgscompoundcurve.h \
 	/usr/include/qgis/qgsconfig.h \
-	/usr/include/qgis/qgscontrastenhancement.h \
 	/usr/include/qgis/qgscoordinatereferencesystem.h \
 	/usr/include/qgis/qgscoordinatetransform.h \
 	/usr/include/qgis/qgscoordinatetransformcontext.h \
 	/usr/include/qgis/qgscurve.h \
 	/usr/include/qgis/qgscustomdrophandler.h \
 	/usr/include/qgis/qgsdataprovider.h \
-	/usr/include/qgis/qgsdataproviderelevationproperties.h \
 	/usr/include/qgis/qgsdataprovidertemporalcapabilities.h \
 	/usr/include/qgis/qgsdatasourceuri.h \
 	/usr/include/qgis/qgsdatetimestatisticalsummary.h \
@@ -294,22 +288,6 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/qgis/qgsproperty.h \
 	/usr/include/qgis/qgspropertycollection.h \
 	/usr/include/qgis/qgsrange.h \
-	/usr/include/qgis/qgsraster.h \
-	/usr/include/qgis/qgsrasterattributetable.h \
-	/usr/include/qgis/qgsrasterbandstats.h \
-	/usr/include/qgis/qgsrasterblock.h \
-	/usr/include/qgis/qgsrasterdataprovider.h \
-	/usr/include/qgis/qgsrasterdataproviderelevationproperties.h \
-	/usr/include/qgis/qgsrasterdataprovidertemporalcapabilities.h \
-	/usr/include/qgis/qgsrasterhistogram.h \
-	/usr/include/qgis/qgsrasterinterface.h \
-	/usr/include/qgis/qgsrasteriterator.h \
-	/usr/include/qgis/qgsrasterlayer.h \
-	/usr/include/qgis/qgsrasterminmaxorigin.h \
-	/usr/include/qgis/qgsrasterpyramid.h \
-	/usr/include/qgis/qgsrasterrange.h \
-	/usr/include/qgis/qgsrastershaderfunction.h \
-	/usr/include/qgis/qgsrasterviewport.h \
 	/usr/include/qgis/qgsreadwritecontext.h \
 	/usr/include/qgis/qgsrectangle.h \
 	/usr/include/qgis/qgsrelation.h \
@@ -592,10 +570,8 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/QCursor \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/QFont \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/QFontDatabase \
-	/usr/include/x86_64-linux-gnu/qt5/QtGui/QGradient \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/QImage \
-	/usr/include/x86_64-linux-gnu/qt5/QtGui/QLinearGradient \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/QPainterPath \
@@ -652,9 +628,7 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
-	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QUndoStack \
@@ -666,7 +640,6 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
-	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgesture.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicseffect.h \
@@ -678,10 +651,7 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
-	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
-	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
-	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
@@ -756,79 +726,20 @@ GisDynamicClient_autogen/timestamp: \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Xml/Qt5XmlConfig.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Xml/Qt5XmlConfigVersion.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in \
-	/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp \
 	/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeParseArguments.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeSystem.cmake.in \
 	/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake \
-	/usr/share/cmake-3.28/Modules/CMakeUnixFindMake.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	/usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake \
 	/usr/share/cmake-3.28/Modules/Compiler/GNU.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	/usr/share/cmake-3.28/Modules/FindGDAL.cmake \
 	/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake \
 	/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake \
-	/usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake \
-	/usr/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake \

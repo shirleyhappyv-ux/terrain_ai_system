@@ -7,7 +7,6 @@
 #include <qgsmapcanvas.h>
 
 // --- 量测工具实现 ---
-// --- 量测工具实现 ---
 MapMeasureTool::MapMeasureTool(QgsMapCanvas* canvas) : QgsMapTool(canvas) {
     mRubberBand = new QgsRubberBand(canvas); 
     

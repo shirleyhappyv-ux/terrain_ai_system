@@ -199,21 +199,13 @@
   /usr/include/qgis/qgsattributes.h \
   /usr/include/qgis/qgsattributetableconfig.h \
   /usr/include/qgis/qgsbox3d.h \
-  /usr/include/qgis/qgscolorramp.h \
-  /usr/include/qgis/qgscolorrampimpl.h \
-  /usr/include/qgis/qgscolorramplegendnodesettings.h \
-  /usr/include/qgis/qgscolorrampshader.h \
   /usr/include/qgis/qgscolorscheme.h \
-  /usr/include/qgis/qgscompoundcurve.h \
   /usr/include/qgis/qgsconfig.h \
-  /usr/include/qgis/qgscontrastenhancement.h \
   /usr/include/qgis/qgscoordinatereferencesystem.h \
   /usr/include/qgis/qgscoordinatetransform.h \
   /usr/include/qgis/qgscoordinatetransformcontext.h \
-  /usr/include/qgis/qgscurve.h \
   /usr/include/qgis/qgscustomdrophandler.h \
   /usr/include/qgis/qgsdataprovider.h \
-  /usr/include/qgis/qgsdataproviderelevationproperties.h \
   /usr/include/qgis/qgsdataprovidertemporalcapabilities.h \
   /usr/include/qgis/qgsdatasourceuri.h \
   /usr/include/qgis/qgsdatetimestatisticalsummary.h \
@@ -245,7 +237,6 @@
   /usr/include/qgis/qgsfieldconstraints.h \
   /usr/include/qgis/qgsfields.h \
   /usr/include/qgis/qgsgeometry.h \
-  /usr/include/qgis/qgsgeometryutils.h \
   /usr/include/qgis/qgshttpheaders.h \
   /usr/include/qgis/qgsindexedfeature.h \
   /usr/include/qgis/qgsinterval.h \
@@ -258,11 +249,9 @@
   /usr/include/qgis/qgslabelthinningsettings.h \
   /usr/include/qgis/qgslayermetadata.h \
   /usr/include/qgis/qgslegendsymbolitem.h \
-  /usr/include/qgis/qgslinestring.h \
   /usr/include/qgis/qgslogger.h \
   /usr/include/qgis/qgsmapcanvas.h \
   /usr/include/qgis/qgsmapcanvasinteractionblocker.h \
-  /usr/include/qgis/qgsmapcanvasitem.h \
   /usr/include/qgis/qgsmapclippingregion.h \
   /usr/include/qgis/qgsmaplayer.h \
   /usr/include/qgis/qgsmaplayerdependency.h \
@@ -271,8 +260,6 @@
   /usr/include/qgis/qgsmaprendererjob.h \
   /usr/include/qgis/qgsmapsettings.h \
   /usr/include/qgis/qgsmapthemecollection.h \
-  /usr/include/qgis/qgsmaptool.h \
-  /usr/include/qgis/qgsmaptoolemitpoint.h \
   /usr/include/qgis/qgsmaptopixel.h \
   /usr/include/qgis/qgsmapunitscale.h \
   /usr/include/qgis/qgsmaskidprovider.h \
@@ -281,8 +268,6 @@
   /usr/include/qgis/qgspallabeling.h \
   /usr/include/qgis/qgspathresolver.h \
   /usr/include/qgis/qgspoint.h \
-  /usr/include/qgis/qgspointlocator.h \
-  /usr/include/qgis/qgspointlocatorinittask.h \
   /usr/include/qgis/qgspointxy.h \
   /usr/include/qgis/qgspolymorphicrelation.h \
   /usr/include/qgis/qgsprevieweffect.h \
@@ -295,22 +280,6 @@
   /usr/include/qgis/qgsproperty.h \
   /usr/include/qgis/qgspropertycollection.h \
   /usr/include/qgis/qgsrange.h \
-  /usr/include/qgis/qgsraster.h \
-  /usr/include/qgis/qgsrasterattributetable.h \
-  /usr/include/qgis/qgsrasterbandstats.h \
-  /usr/include/qgis/qgsrasterblock.h \
-  /usr/include/qgis/qgsrasterdataprovider.h \
-  /usr/include/qgis/qgsrasterdataproviderelevationproperties.h \
-  /usr/include/qgis/qgsrasterdataprovidertemporalcapabilities.h \
-  /usr/include/qgis/qgsrasterhistogram.h \
-  /usr/include/qgis/qgsrasterinterface.h \
-  /usr/include/qgis/qgsrasteriterator.h \
-  /usr/include/qgis/qgsrasterlayer.h \
-  /usr/include/qgis/qgsrasterminmaxorigin.h \
-  /usr/include/qgis/qgsrasterpyramid.h \
-  /usr/include/qgis/qgsrasterrange.h \
-  /usr/include/qgis/qgsrastershaderfunction.h \
-  /usr/include/qgis/qgsrasterviewport.h \
   /usr/include/qgis/qgsreadwritecontext.h \
   /usr/include/qgis/qgsrectangle.h \
   /usr/include/qgis/qgsrelation.h \
@@ -318,7 +287,6 @@
   /usr/include/qgis/qgsrelationmanager.h \
   /usr/include/qgis/qgsrendercontext.h \
   /usr/include/qgis/qgsrenderer.h \
-  /usr/include/qgis/qgsrubberband.h \
   /usr/include/qgis/qgsrulebasedlabeling.h \
   /usr/include/qgis/qgsscalecalculator.h \
   /usr/include/qgis/qgsscreenproperties.h \
@@ -326,13 +294,11 @@
   /usr/include/qgis/qgssettingstreenode.h \
   /usr/include/qgis/qgssimplifymethod.h \
   /usr/include/qgis/qgssnappingconfig.h \
-  /usr/include/qgis/qgssnappingutils.h \
   /usr/include/qgis/qgssqliteutils.h \
   /usr/include/qgis/qgsstatisticalsummary.h \
   /usr/include/qgis/qgsstringstatisticalsummary.h \
   /usr/include/qgis/qgsstringutils.h \
   /usr/include/qgis/qgssymbollayerreference.h \
-  /usr/include/qgis/qgstaskmanager.h \
   /usr/include/qgis/qgstemporalproperty.h \
   /usr/include/qgis/qgstemporalrangeobject.h \
   /usr/include/qgis/qgstextbackgroundsettings.h \
@@ -344,7 +310,6 @@
   /usr/include/qgis/qgstranslationcontext.h \
   /usr/include/qgis/qgsvariantutils.h \
   /usr/include/qgis/qgsvector.h \
-  /usr/include/qgis/qgsvector3d.h \
   /usr/include/qgis/qgsvectordataprovider.h \
   /usr/include/qgis/qgsvectordataprovidertemporalcapabilities.h \
   /usr/include/qgis/qgsvectorlayer.h \
@@ -445,10 +410,8 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QExplicitlySharedDataPointer \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QFileInfo \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFuture \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QFutureWatcher \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonArray \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
@@ -466,7 +429,6 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QRectF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QRecursiveMutex \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QRegularExpression \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSemaphore \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QSet \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QSettings \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedData \
@@ -527,7 +489,6 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h \
@@ -559,7 +520,6 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qresultstore.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qrunnable.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsemaphore.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsettings.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
@@ -587,24 +547,15 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QCursor \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QFont \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QFontDatabase \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QGradient \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QImage \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QLinearGradient \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainterPath \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPicture \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygon \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygonF \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QTransform \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QVector3D \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
@@ -642,20 +593,14 @@
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector3d.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtSvg/QSvgRenderer \
-  /usr/include/x86_64-linux-gnu/qt5/QtSvg/qsvgrenderer.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtSvg/qtsvgglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGestureEvent \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsEffect \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QUndoStack \
@@ -667,11 +612,9 @@
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgesture.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicseffect.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
@@ -679,10 +622,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
@@ -711,5 +651,4 @@
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
-  /workspaces/terrain_ai_system/custom_map_tools.h
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h

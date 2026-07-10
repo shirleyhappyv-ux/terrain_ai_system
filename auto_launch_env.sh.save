@@ -1,3 +1,8 @@
+
+
+# 🔧 核心补齐：在后台拉起 noVNC 网页服务器，把 5900 裸流转化为 6080 网页视图
+/usr/share/novnc/utils/launch.sh --vnc localhost:5900 --listen 6080 > /dev/null 2>&1 &
+sleep 1
 #!/bin/bash
 # =================================================================
 # 文件路径：/workspaces/terrain_ai_system/auto_launch_env.sh
@@ -20,10 +25,6 @@ sleep 1
 DISPLAY=:1 x11vnc -display :1 -nopw -listen localhost -shared -forever > /dev/null 2>&1 &
 sleep 1
 
-# 🔧 核心补齐：在后台拉起 noVNC 网页服务器，把 5900 裸流转化为 6080 网页视图
-/usr/share/novnc/utils/launch.sh --vnc localhost:5900 --listen 6080 > /dev/null 2>&1 &
-sleep 1
-
 # 5. 注入 QGIS 全套生产力环境变量到当前容器的全局 Bash 环境中
 export DISPLAY=:1
 export LD_LIBRARY_PATH=/usr/lib:/usr/local/lib:$LD_LIBRARY_PATH
@@ -31,6 +32,7 @@ export GDAL_DATA=/usr/share/gdal
 export PROJ_LIB=/usr/share/proj
 export QGIS_PREFIX_PATH=/usr
 export QGIS_PLUGIN_PATH=/usr/lib/qgis/plugins
+
 # 将变量也同步追加进 ~/.bashrc，这样你自己在终端手动 debug 时也不用再 export 了
 if ! grep -q "QGIS_PREFIX_PATH" ~/.bashrc; then
     echo 'export DISPLAY=:1' >> ~/.bashrc

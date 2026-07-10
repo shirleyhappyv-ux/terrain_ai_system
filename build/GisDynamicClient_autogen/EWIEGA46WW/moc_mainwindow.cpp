@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[21];
-    char stringdata0[314];
+    QByteArrayData data[9];
+    char stringdata0[114];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,36 +33,19 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 24), // "executeDynamicMCDASearch"
-QT_MOC_LITERAL(2, 36, 0), // ""
-QT_MOC_LITERAL(3, 37, 21), // "generateProfileAndLOS"
-QT_MOC_LITERAL(4, 59, 23), // "updateStatusBarDistance"
-QT_MOC_LITERAL(5, 83, 4), // "dist"
-QT_MOC_LITERAL(6, 88, 9), // "zoomInMap"
-QT_MOC_LITERAL(7, 98, 10), // "zoomOutMap"
-QT_MOC_LITERAL(8, 109, 19), // "activateMeasureTool"
-QT_MOC_LITERAL(9, 129, 16), // "activatePlotTool"
-QT_MOC_LITERAL(10, 146, 27), // "executeAdvancedGlobalSearch"
-QT_MOC_LITERAL(11, 174, 26), // "handleSearchResultSelected"
-QT_MOC_LITERAL(12, 201, 16), // "QListWidgetItem*"
-QT_MOC_LITERAL(13, 218, 4), // "item"
-QT_MOC_LITERAL(14, 223, 21), // "insertQuickSearchText"
-QT_MOC_LITERAL(15, 245, 18), // "handleTableClicked"
-QT_MOC_LITERAL(16, 264, 3), // "row"
-QT_MOC_LITERAL(17, 268, 6), // "column"
-QT_MOC_LITERAL(18, 275, 21), // "handleMapPointPlotted"
-QT_MOC_LITERAL(19, 297, 10), // "QgsPointXY"
-QT_MOC_LITERAL(20, 308, 5) // "point"
+QT_MOC_LITERAL(1, 11, 9), // "zoomInMap"
+QT_MOC_LITERAL(2, 21, 0), // ""
+QT_MOC_LITERAL(3, 22, 10), // "zoomOutMap"
+QT_MOC_LITERAL(4, 33, 17), // "executeTextSearch"
+QT_MOC_LITERAL(5, 51, 26), // "executeTunnelSiteSelection"
+QT_MOC_LITERAL(6, 78, 24), // "handleTableDoubleClicked"
+QT_MOC_LITERAL(7, 103, 3), // "row"
+QT_MOC_LITERAL(8, 107, 6) // "column"
 
     },
-    "MainWindow\0executeDynamicMCDASearch\0"
-    "\0generateProfileAndLOS\0updateStatusBarDistance\0"
-    "dist\0zoomInMap\0zoomOutMap\0activateMeasureTool\0"
-    "activatePlotTool\0executeAdvancedGlobalSearch\0"
-    "handleSearchResultSelected\0QListWidgetItem*\0"
-    "item\0insertQuickSearchText\0"
-    "handleTableClicked\0row\0column\0"
-    "handleMapPointPlotted\0QgsPointXY\0point"
+    "MainWindow\0zoomInMap\0\0zoomOutMap\0"
+    "executeTextSearch\0executeTunnelSiteSelection\0"
+    "handleTableDoubleClicked\0row\0column"
 };
 #undef QT_MOC_LITERAL
 
@@ -72,7 +55,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      12,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -80,32 +63,18 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   74,    2, 0x08 /* Private */,
-       3,    0,   75,    2, 0x08 /* Private */,
-       4,    1,   76,    2, 0x08 /* Private */,
-       6,    0,   79,    2, 0x08 /* Private */,
-       7,    0,   80,    2, 0x08 /* Private */,
-       8,    0,   81,    2, 0x08 /* Private */,
-       9,    0,   82,    2, 0x08 /* Private */,
-      10,    0,   83,    2, 0x08 /* Private */,
-      11,    1,   84,    2, 0x08 /* Private */,
-      14,    0,   87,    2, 0x08 /* Private */,
-      15,    2,   88,    2, 0x08 /* Private */,
-      18,    1,   93,    2, 0x08 /* Private */,
+       1,    0,   39,    2, 0x08 /* Private */,
+       3,    0,   40,    2, 0x08 /* Private */,
+       4,    0,   41,    2, 0x08 /* Private */,
+       5,    0,   42,    2, 0x08 /* Private */,
+       6,    2,   43,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Double,    5,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 12,   13,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,   16,   17,
-    QMetaType::Void, 0x80000000 | 19,   20,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    7,    8,
 
        0        // eod
 };
@@ -116,30 +85,12 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->executeDynamicMCDASearch(); break;
-        case 1: _t->generateProfileAndLOS(); break;
-        case 2: _t->updateStatusBarDistance((*reinterpret_cast< double(*)>(_a[1]))); break;
-        case 3: _t->zoomInMap(); break;
-        case 4: _t->zoomOutMap(); break;
-        case 5: _t->activateMeasureTool(); break;
-        case 6: _t->activatePlotTool(); break;
-        case 7: _t->executeAdvancedGlobalSearch(); break;
-        case 8: _t->handleSearchResultSelected((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
-        case 9: _t->insertQuickSearchText(); break;
-        case 10: _t->handleTableClicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 11: _t->handleMapPointPlotted((*reinterpret_cast< const QgsPointXY(*)>(_a[1]))); break;
+        case 0: _t->zoomInMap(); break;
+        case 1: _t->zoomOutMap(); break;
+        case 2: _t->executeTextSearch(); break;
+        case 3: _t->executeTunnelSiteSelection(); break;
+        case 4: _t->handleTableDoubleClicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
-        }
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        switch (_id) {
-        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 11:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QgsPointXY >(); break;
-            }
-            break;
         }
     }
 }
@@ -173,13 +124,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 12)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        if (_id < 5)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 5;
     }
     return _id;
 }

@@ -582,12 +582,6 @@ CMakeFiles/GisDynamicClient.dir/GisDynamicClient_autogen/mocs_compilation.cpp.o:
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
  /usr/include/qgis/qgsmapcanvas.h \
  /usr/include/qgis/qgscustomdrophandler.h \
  /usr/include/qgis/qgsmimedatautils.h \
@@ -673,26 +667,4 @@ CMakeFiles/GisDynamicClient.dir/GisDynamicClient_autogen/mocs_compilation.cpp.o:
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
- /usr/include/qgis/qgsrasterlayer.h \
- /usr/include/qgis/qgsrasterdataprovider.h \
- /usr/include/qgis/qgscolorrampshader.h \
- /usr/include/qgis/qgsrastershaderfunction.h \
- /usr/include/qgis/qgscolorramplegendnodesettings.h \
- /usr/include/qgis/qgsrasterattributetable.h \
- /usr/include/qgis/qgscolorrampimpl.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QGradient \
- /usr/include/qgis/qgscolorramp.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QLinearGradient \
- /usr/include/qgis/qgsrasterinterface.h \
- /usr/include/qgis/qgsrasterbandstats.h \
- /usr/include/qgis/qgsrasterblock.h /usr/include/qgis/qgsrasterrange.h \
- /usr/include/qgis/qgsrasterhistogram.h \
- /usr/include/qgis/qgsrasterpyramid.h \
- /usr/include/qgis/qgsrasteriterator.h \
- /usr/include/qgis/qgsrasterdataprovidertemporalcapabilities.h \
- /usr/include/qgis/qgsrasterdataproviderelevationproperties.h \
- /usr/include/qgis/qgsdataproviderelevationproperties.h \
- /usr/include/qgis/qgsrasterviewport.h \
- /usr/include/qgis/qgsrasterminmaxorigin.h \
- /usr/include/qgis/qgscontrastenhancement.h /usr/include/qgis/qgsraster.h \
  /usr/include/qgis/qgsproject.h
