@@ -47,18 +47,14 @@ void MainWindow::setupUi() {
     layoutZoom->addWidget(btnZoomIn); layoutZoom->addWidget(btnZoomOut);
     panelLayout->addLayout(layoutZoom);
 
-    // 模块 1：基础检索（干净无快捷键）
+    // 模块 1：基础检索
     panelLayout->addWidget(new QLabel("<br><b>[功能模块 1] 基础搜索</b>"));
     QHBoxLayout* textSearchLayout = new QHBoxLayout();
     leTextSearch = new QLineEdit(this);
-    leTextSearch->setPlaceholderText("请输入地名/路名/POI...");
-    
-    QPushButton* btnPasteBridge = new QPushButton("📋 读取本机文本", this);
-    btnPasteBridge->setStyleSheet("background-color: #2ECC71; color: white; font-weight: bold;");
+    leTextSearch->setPlaceholderText("点击此框自动同步并搜索...");
     
     btnSmartSearch = new QPushButton("🔍 智能搜索", this);
     textSearchLayout->addWidget(leTextSearch); 
-    textSearchLayout->addWidget(btnPasteBridge); 
     textSearchLayout->addWidget(btnSmartSearch);
     panelLayout->addLayout(textSearchLayout);
 
@@ -121,15 +117,6 @@ void MainWindow::setupUi() {
     connect(btnMcdasel, &QPushButton::clicked, this, &MainWindow::executeTunnelSiteSelection);
     connect(tableWidgetConfirm, &QTableWidget::cellDoubleClicked, this, &MainWindow::handleTableDoubleClicked);
 
-    connect(btnPasteBridge, &QPushButton::clicked, this, [this]() {
-        QFile file("/workspaces/terrain_ai_system/paste.txt");
-        if (file.open(QIODevice::ReadOnly)) {
-            QByteArray rawBytes = file.readAll().trimmed(); file.close();
-            leTextSearch->setText(QString::fromUtf8(rawBytes));
-            lblStatus->setText("【成功】本地文本已无损导入输入框。");
-        }
-    });
-
     connect(listWidgetSimilarConfirm, &QListWidget::itemDoubleClicked, this, [this](QListWidgetItem* item){
         bool ok = false;
         int realIdx = item->data(Qt::UserRole).toInt(&ok);
@@ -140,6 +127,23 @@ void MainWindow::setupUi() {
             qDebug() << "[GIS_ERROR] 路由物理索引解析失败！";
         }
     });
+
+    // 信号汇聚部分：
+    connect(btnZoomIn, &QPushButton::clicked, this, &MainWindow::zoomInMap);
+    connect(btnZoomOut, &QPushButton::clicked, this, &MainWindow::zoomOutMap);
+    connect(btnSmartSearch, &QPushButton::clicked, this, &MainWindow::executeTextSearch);
+    connect(tableWidgetConfirm, &QTableWidget::cellDoubleClicked, this, &MainWindow::handleTableDoubleClicked);
+
+    connect(listWidgetSimilarConfirm, &QListWidget::itemDoubleClicked, this, [this](QListWidgetItem* item){
+        bool ok = false;
+        int realIdx = item->data(Qt::UserRole).toInt(&ok);
+        if(ok && realIdx >= 0 && realIdx < mCurrentResults.size()) { 
+            handleTableDoubleClicked(realIdx, 0); 
+        }
+    });
+
+    // 🌟【无感同步核心】：为输入框安装事件过滤器，只要鼠标点击点进该框，自动无感读取最新文本！
+    leTextSearch->installEventFilter(this);
 }
 
 void MainWindow::initGisLayers() {
@@ -566,4 +570,23 @@ void MainWindow::handleTableDoubleClicked(int row, int column) {
 
     QMessageBox::information(this, "空间决策二次确认中心", popupMsg);
     lblStatus->setText(QString("视图已定位要素: %1 (X:%2, Y:%3) | 综合:%4").arg(target.name).arg(coordX).arg(coordY).arg(totalScore));
+}
+
+// 🌟 终极事件过滤器：鼠标只要点进输入框，瞬间静默读取文本并填入，用户体验等同于直接粘贴
+bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
+    if (obj == leTextSearch && (event->type() == QEvent::FocusIn || event->type() == QEvent::MouseButtonPress)) {
+        QFile file("/workspaces/terrain_ai_system/paste.txt");
+        if (file.open(QIODevice::ReadOnly)) {
+            QByteArray rawBytes = file.readAll().trimmed(); 
+            file.close();
+            QString decodedText = QString::fromUtf8(rawBytes);
+            
+            // 只有当文件内容不为空，且当前输入框内容与之不同时才自动覆盖，防止干扰用户连续输入
+            if (!decodedText.isEmpty() && leTextSearch->text() != decodedText) {
+                leTextSearch->setText(decodedText);
+                lblStatus->setText("【无感同步】已自动从缓冲区对齐最新检索文本。");
+            }
+        }
+    }
+    return QMainWindow::eventFilter(obj, event);
 }
