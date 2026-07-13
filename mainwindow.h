@@ -65,5 +65,7 @@ private:
     QPushButton* btnSmartSearch;          
 
     QList<GisSearchTarget> mCurrentResults;
-};
 
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
+};
