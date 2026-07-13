@@ -3,7 +3,8 @@
 #include <QMainWindow>
 #include <QLineEdit>
 #include <QPushButton>
-#include <QTableWidget>        
+#include <QTableWidget>
+#include <QListWidget>        
 #include <QLabel>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
@@ -33,7 +34,7 @@ private slots:
     void zoomOutMap();                  
     void executeTextSearch();           
     void executeTunnelSiteSelection();  
-    void handleTableDoubleClicked(int row, int column); // 🔧 升级：修改为表格双击行槽函数
+    void handleTableDoubleClicked(int row, int column); 
 
 private:
     void setupUi();
@@ -51,12 +52,18 @@ private:
 
     QLineEdit* leTextSearch;
     
+    // UI输入框变量声明：已剔除 NDVI 植被部分
     QLineEdit* leAreaMin; QLineEdit* leElevMin; QLineEdit* leElevMax;
     QLineEdit* leHeightIdeal; QLineEdit* leBiGaoIdeal; QLineEdit* leSlopeIdeal; QLineEdit* leRoughIdeal;
-    QLineEdit* leNdviInput; QLineEdit* leRoadDist; QLineEdit* leWaterDist;
+    QLineEdit* leRoadDist; QLineEdit* leWaterDist;
 
-    QTableWidget* tableWidgetConfirm; // 🔧 升级：统一的结果二次确认表格
+    QTableWidget* tableWidgetConfirm; 
     QLabel* lblStatus;
+
+    QListWidget* listWidgetSimilarConfirm; 
+    QLabel* lblSimilarTitle;              
+    QPushButton* btnSmartSearch;          
 
     QList<GisSearchTarget> mCurrentResults;
 };
+
