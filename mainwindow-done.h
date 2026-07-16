@@ -17,9 +17,6 @@
 #include <qgsproject.h>
 #include <gdal_priv.h>
 
-// 引入API功能头文件
-#include "gisapiserver.h" 
-
 struct GisSearchTarget {
     QString name;        
     QString details;     
@@ -76,8 +73,6 @@ private:
     QPushButton* btnSmartSearch = nullptr;          
 
     QList<GisSearchTarget> mCurrentResults;
-
-    GisApiServer* m_apiServer = nullptr; // API 服务器指针
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;

@@ -1,37 +1,51 @@
 #include <qgsapplication.h>
 #include <qgsproviderregistry.h>
 #include "mainwindow.h"
-#include <QDebug>
+#include <QDir>
+#include <QFile>
+#include <QProcessEnvironment>
 
 int main(int argc, char *argv[]) {
-    // 1. 优先设置 Linux 环境变量
-    qputenv("QGIS_PREFIX_PATH", "/usr");
-    qputenv("PROJ_LIB", "/usr/share/proj");
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
-    // 2. 实例化 QgsApplication，必须在一切 GUI 和 QGIS 对象之前[cite: 3]
-    QgsApplication app(argc, argv, true); 
+    // 🌟 自动探测并静默注入 PROJ 数据库路径（兼容 Linux Codespaces 与 Windows 绿色包）
+    QStringList possibleProjPaths = {
+        "/usr/share/proj",
+        "/usr/local/share/proj",
+        "/usr/lib/x86_64-linux-gnu/proj",
+        QCoreApplication::applicationDirPath() + "/proj"
+    };
 
-    QString prefixPath = "/usr";
-    QString pluginPath = "/usr/lib/qgis/plugins";
-    
-    QgsApplication::setPrefixPath(prefixPath, true);
+    for (const QString& path : possibleProjPaths) {
+        if (QFile::exists(path + "/proj.db")) {
+            qputenv("PROJ_LIB", path.toUtf8());
+            break;
+        }
+    }
+
+    QgsApplication app(argc, argv, true);
+
+    QString appDir = QCoreApplication::applicationDirPath();
+    QString qgisPrefix = appDir;                      
+    QString pluginPath = appDir + "/qgis_plugins";   
+
+#ifndef _WIN32
+    // Linux 环境下的系统级路径配置
+    qgisPrefix = "/usr";
+    pluginPath = "/usr/lib/qgis/plugins";
+#endif
+
+    QgsApplication::setPrefixPath(qgisPrefix, true);
     QgsApplication::setPluginPath(pluginPath);
     
-    // 3. 核心初始化[cite: 3]
     QgsApplication::initQgis();
     QgsProviderRegistry::instance(pluginPath);
 
-    qDebug() << "========================================";
-    qDebug() << "✅ QGIS 框架初始化成功！准备拉起界面...";
-    qDebug() << "========================================";
-
-    // 4. 延迟安全创建主界面
     MainWindow* mainWindow = new MainWindow();
     mainWindow->show();
 
     int execCode = app.exec();
-    
-    // 5. 安全卸载资源
+
     delete mainWindow;
     QgsApplication::exitQgis();
     return execCode;

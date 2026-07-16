@@ -1,4 +1,4 @@
-/workspaces/terrain_ai_system/build/GisDynamicClient_autogen/EWIEGA46WW/moc_mainwindow.cpp: /workspaces/terrain_ai_system/mainwindow.h \
+/workspaces/terrain_ai_system/build/GisDynamicClient_autogen/EWIEGA46WW/moc_custom_map_tools.cpp: /workspaces/terrain_ai_system/custom_map_tools.h \
   /workspaces/terrain_ai_system/build/GisDynamicClient_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -143,7 +143,6 @@
   /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
-  /usr/include/c++/13/math.h \
   /usr/include/c++/13/memory \
   /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
@@ -183,30 +182,6 @@
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
-  /usr/include/gdal/cpl_atomic_ops.h \
-  /usr/include/gdal/cpl_config.h \
-  /usr/include/gdal/cpl_conv.h \
-  /usr/include/gdal/cpl_error.h \
-  /usr/include/gdal/cpl_json.h \
-  /usr/include/gdal/cpl_minixml.h \
-  /usr/include/gdal/cpl_multiproc.h \
-  /usr/include/gdal/cpl_port.h \
-  /usr/include/gdal/cpl_progress.h \
-  /usr/include/gdal/cpl_string.h \
-  /usr/include/gdal/cpl_virtualmem.h \
-  /usr/include/gdal/cpl_vsi.h \
-  /usr/include/gdal/gdal.h \
-  /usr/include/gdal/gdal_frmts.h \
-  /usr/include/gdal/gdal_priv.h \
-  /usr/include/gdal/gdal_version.h \
-  /usr/include/gdal/gdalsubdatasetinfo.h \
-  /usr/include/gdal/ogr_api.h \
-  /usr/include/gdal/ogr_core.h \
-  /usr/include/gdal/ogr_feature.h \
-  /usr/include/gdal/ogr_featurestyle.h \
-  /usr/include/gdal/ogr_geometry.h \
-  /usr/include/gdal/ogr_spatialref.h \
-  /usr/include/gdal/ogr_srs_api.h \
   /usr/include/linux/errno.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
@@ -218,36 +193,26 @@
   /usr/include/qgis/qgsabstractgeometry.h \
   /usr/include/qgis/qgsabstractmetadatabase.h \
   /usr/include/qgis/qgsabstractprofilesource.h \
-  /usr/include/qgis/qgsabstractsensor.h \
   /usr/include/qgis/qgsaggregatecalculator.h \
-  /usr/include/qgis/qgsarchive.h \
   /usr/include/qgis/qgsattributes.h \
   /usr/include/qgis/qgsattributetableconfig.h \
   /usr/include/qgis/qgsbox3d.h \
-  /usr/include/qgis/qgscolorramp.h \
-  /usr/include/qgis/qgscolorrampimpl.h \
-  /usr/include/qgis/qgscolorramplegendnodesettings.h \
-  /usr/include/qgis/qgscolorrampshader.h \
-  /usr/include/qgis/qgscolorscheme.h \
+  /usr/include/qgis/qgscompoundcurve.h \
   /usr/include/qgis/qgsconfig.h \
-  /usr/include/qgis/qgscontrastenhancement.h \
   /usr/include/qgis/qgscoordinatereferencesystem.h \
   /usr/include/qgis/qgscoordinatetransform.h \
   /usr/include/qgis/qgscoordinatetransformcontext.h \
-  /usr/include/qgis/qgscustomdrophandler.h \
+  /usr/include/qgis/qgscurve.h \
   /usr/include/qgis/qgsdataprovider.h \
-  /usr/include/qgis/qgsdataproviderelevationproperties.h \
   /usr/include/qgis/qgsdataprovidertemporalcapabilities.h \
   /usr/include/qgis/qgsdatasourceuri.h \
   /usr/include/qgis/qgsdatetimestatisticalsummary.h \
   /usr/include/qgis/qgsdatumtransform.h \
   /usr/include/qgis/qgsdefaultvalue.h \
-  /usr/include/qgis/qgsdistancearea.h \
   /usr/include/qgis/qgseditformconfig.h \
   /usr/include/qgis/qgseditorwidgetsetup.h \
   /usr/include/qgis/qgselevationmap.h \
   /usr/include/qgis/qgselevationshadingrenderer.h \
-  /usr/include/qgis/qgsellipsoidutils.h \
   /usr/include/qgis/qgserror.h \
   /usr/include/qgis/qgsexception.h \
   /usr/include/qgis/qgsexpression.h \
@@ -257,112 +222,64 @@
   /usr/include/qgis/qgsexpressionfunction.h \
   /usr/include/qgis/qgsexpressionnode.h \
   /usr/include/qgis/qgsfeature.h \
-  /usr/include/qgis/qgsfeaturefilterprovider.h \
   /usr/include/qgis/qgsfeatureid.h \
   /usr/include/qgis/qgsfeatureiterator.h \
   /usr/include/qgis/qgsfeaturerequest.h \
   /usr/include/qgis/qgsfeaturesink.h \
   /usr/include/qgis/qgsfeaturesource.h \
-  /usr/include/qgis/qgsfeedback.h \
   /usr/include/qgis/qgsfield.h \
   /usr/include/qgis/qgsfieldconstraints.h \
   /usr/include/qgis/qgsfields.h \
   /usr/include/qgis/qgsgeometry.h \
+  /usr/include/qgis/qgsgeometryutils.h \
   /usr/include/qgis/qgshttpheaders.h \
   /usr/include/qgis/qgsindexedfeature.h \
   /usr/include/qgis/qgsinterval.h \
-  /usr/include/qgis/qgslabelingengine.h \
   /usr/include/qgis/qgslabelingenginesettings.h \
-  /usr/include/qgis/qgslabellinesettings.h \
-  /usr/include/qgis/qgslabelobstaclesettings.h \
-  /usr/include/qgis/qgslabelplacementsettings.h \
-  /usr/include/qgis/qgslabelsink.h \
-  /usr/include/qgis/qgslabelthinningsettings.h \
   /usr/include/qgis/qgslayermetadata.h \
-  /usr/include/qgis/qgslegendsymbolitem.h \
+  /usr/include/qgis/qgslinestring.h \
   /usr/include/qgis/qgslogger.h \
-  /usr/include/qgis/qgsmapcanvas.h \
-  /usr/include/qgis/qgsmapcanvasinteractionblocker.h \
+  /usr/include/qgis/qgsmapcanvasitem.h \
   /usr/include/qgis/qgsmapclippingregion.h \
   /usr/include/qgis/qgsmaplayer.h \
   /usr/include/qgis/qgsmaplayerdependency.h \
   /usr/include/qgis/qgsmaplayerserverproperties.h \
-  /usr/include/qgis/qgsmaplayerstore.h \
-  /usr/include/qgis/qgsmaprendererjob.h \
   /usr/include/qgis/qgsmapsettings.h \
-  /usr/include/qgis/qgsmapthemecollection.h \
+  /usr/include/qgis/qgsmaptool.h \
+  /usr/include/qgis/qgsmaptoolemitpoint.h \
   /usr/include/qgis/qgsmaptopixel.h \
-  /usr/include/qgis/qgsmapunitscale.h \
-  /usr/include/qgis/qgsmaskidprovider.h \
-  /usr/include/qgis/qgsmimedatautils.h \
   /usr/include/qgis/qgsobjectcustomproperties.h \
-  /usr/include/qgis/qgspallabeling.h \
   /usr/include/qgis/qgspathresolver.h \
   /usr/include/qgis/qgspoint.h \
+  /usr/include/qgis/qgspointlocator.h \
+  /usr/include/qgis/qgspointlocatorinittask.h \
   /usr/include/qgis/qgspointxy.h \
-  /usr/include/qgis/qgspolymorphicrelation.h \
-  /usr/include/qgis/qgsprevieweffect.h \
-  /usr/include/qgis/qgsproject.h \
-  /usr/include/qgis/qgsprojectdisplaysettings.h \
-  /usr/include/qgis/qgsprojectmetadata.h \
-  /usr/include/qgis/qgsprojectproperty.h \
   /usr/include/qgis/qgsprojecttranslator.h \
-  /usr/include/qgis/qgsprojectversion.h \
   /usr/include/qgis/qgsproperty.h \
   /usr/include/qgis/qgspropertycollection.h \
   /usr/include/qgis/qgsrange.h \
-  /usr/include/qgis/qgsraster.h \
-  /usr/include/qgis/qgsrasterattributetable.h \
-  /usr/include/qgis/qgsrasterbandstats.h \
-  /usr/include/qgis/qgsrasterblock.h \
-  /usr/include/qgis/qgsrasterdataprovider.h \
-  /usr/include/qgis/qgsrasterdataproviderelevationproperties.h \
-  /usr/include/qgis/qgsrasterdataprovidertemporalcapabilities.h \
-  /usr/include/qgis/qgsrasterhistogram.h \
-  /usr/include/qgis/qgsrasterinterface.h \
-  /usr/include/qgis/qgsrasteriterator.h \
-  /usr/include/qgis/qgsrasterlayer.h \
-  /usr/include/qgis/qgsrasterminmaxorigin.h \
-  /usr/include/qgis/qgsrasterpyramid.h \
-  /usr/include/qgis/qgsrasterrange.h \
-  /usr/include/qgis/qgsrastershaderfunction.h \
-  /usr/include/qgis/qgsrasterviewport.h \
   /usr/include/qgis/qgsreadwritecontext.h \
   /usr/include/qgis/qgsrectangle.h \
   /usr/include/qgis/qgsrelation.h \
   /usr/include/qgis/qgsrelationcontext.h \
-  /usr/include/qgis/qgsrelationmanager.h \
-  /usr/include/qgis/qgsrendercontext.h \
-  /usr/include/qgis/qgsrenderer.h \
-  /usr/include/qgis/qgsrulebasedlabeling.h \
+  /usr/include/qgis/qgsrubberband.h \
   /usr/include/qgis/qgsscalecalculator.h \
-  /usr/include/qgis/qgsscreenproperties.h \
-  /usr/include/qgis/qgssettings.h \
-  /usr/include/qgis/qgssettingstreenode.h \
   /usr/include/qgis/qgssimplifymethod.h \
   /usr/include/qgis/qgssnappingconfig.h \
+  /usr/include/qgis/qgssnappingutils.h \
   /usr/include/qgis/qgssqliteutils.h \
   /usr/include/qgis/qgsstatisticalsummary.h \
   /usr/include/qgis/qgsstringstatisticalsummary.h \
-  /usr/include/qgis/qgsstringutils.h \
-  /usr/include/qgis/qgssymbollayerreference.h \
+  /usr/include/qgis/qgstaskmanager.h \
   /usr/include/qgis/qgstemporalproperty.h \
   /usr/include/qgis/qgstemporalrangeobject.h \
-  /usr/include/qgis/qgstextbackgroundsettings.h \
-  /usr/include/qgis/qgstextbuffersettings.h \
-  /usr/include/qgis/qgstextformat.h \
-  /usr/include/qgis/qgstextmasksettings.h \
-  /usr/include/qgis/qgstextshadowsettings.h \
   /usr/include/qgis/qgstolerance.h \
-  /usr/include/qgis/qgstranslationcontext.h \
   /usr/include/qgis/qgsvariantutils.h \
   /usr/include/qgis/qgsvector.h \
+  /usr/include/qgis/qgsvector3d.h \
   /usr/include/qgis/qgsvectordataprovider.h \
   /usr/include/qgis/qgsvectordataprovidertemporalcapabilities.h \
   /usr/include/qgis/qgsvectorlayer.h \
-  /usr/include/qgis/qgsvectorlayereditbuffergroup.h \
-  /usr/include/qgis/qgsvectorlayerlabeling.h \
-  /usr/include/qgis/qgsvectorlayerlabelprovider.h \
   /usr/include/qgis/qgsvectorsimplifymethod.h \
   /usr/include/qgis/qgsvertexid.h \
   /usr/include/qgis/qgswkbptr.h \
@@ -400,13 +317,9 @@
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/statx.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
@@ -431,8 +344,6 @@
   /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
@@ -461,9 +372,8 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QElapsedTimer \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QExplicitlySharedDataPointer \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFileInfo \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFutureWatcher \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFuture \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonArray \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument \
@@ -472,44 +382,31 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QMap \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaEnum \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMimeData \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QMutex \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPair \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPoint \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointer \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QReadWriteLock \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QRectF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QRecursiveMutex \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QRegularExpression \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSemaphore \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QSet \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSettings \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedData \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QSize \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTemporaryDir \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTemporaryFile \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QTime \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTranslator \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QUuid \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariantList \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariantMap \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QtGlobal \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
@@ -522,28 +419,23 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcryptographichash.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qelapsedtimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qexception.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuture.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfutureinterface.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuturewatcher.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h \
@@ -557,7 +449,6 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
@@ -577,8 +468,8 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qresultstore.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qrunnable.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsemaphore.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsettings.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h \
@@ -592,11 +483,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporarydir.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporaryfile.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
@@ -604,17 +491,19 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QCursor \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QFont \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QFontDatabase \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QGradient \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QImage \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QLinearGradient \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainterPath \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPicture \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygon \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygonF \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QTransform \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QVector3D \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
@@ -622,7 +511,6 @@
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontdatabase.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
@@ -632,98 +520,32 @@
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpicture.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector3d.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QAbstractSocket \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QHostAddress \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkProxy \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkRequest \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QSslConfiguration \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QSslError \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkproxy.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkrequest.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qssl.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslcertificate.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslconfiguration.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslerror.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslsocket.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpsocket.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/QWebSocket \
-  /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/QWebSocketServer \
-  /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/qwebsocket.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/qwebsocketprotocol.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/qwebsockets_global.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/qwebsocketserver.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSvg/QSvgRenderer \
+  /usr/include/x86_64-linux-gnu/qt5/QtSvg/qsvgrenderer.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtSvg/qtsvgglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGestureEvent \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsEffect \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QUndoStack \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgesture.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicseffect.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qundostack.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtXml/QDomDocument \
   /usr/include/x86_64-linux-gnu/qt5/QtXml/QDomElement \
   /usr/include/x86_64-linux-gnu/qt5/QtXml/QDomNode \
@@ -731,13 +553,10 @@
   /usr/include/x86_64-linux-gnu/qt5/QtXml/qtxml-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtXml/qtxmlglobal.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
-  /workspaces/terrain_ai_system/gisapiserver.h
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h

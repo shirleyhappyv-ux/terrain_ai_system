@@ -690,8 +690,47 @@ CMakeFiles/GisDynamicClient.dir/mainwindow.cpp.o: \
  /usr/include/gdal/cpl_atomic_ops.h /usr/include/gdal/ogr_feature.h \
  /usr/include/gdal/ogr_featurestyle.h /usr/include/gdal/ogr_geometry.h \
  /usr/include/gdal/cpl_json.h /usr/include/gdal/ogr_spatialref.h \
- /usr/include/gdal/ogr_srs_api.h /usr/include/qgis/qgssymbol.h \
- /usr/include/qgis/qgsfeaturerequest.h \
+ /usr/include/gdal/ogr_srs_api.h \
+ /workspaces/terrain_ai_system/gisapiserver.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/QWebSocketServer \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/qwebsocketserver.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/qwebsockets_global.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/qwebsocketprotocol.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QHostAddress \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QSslConfiguration \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslconfiguration.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslerror.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslcertificate.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcryptographichash.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qssl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QSslError \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslerror.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/QWebSocket \
+ /usr/include/x86_64-linux-gnu/qt5/QtWebSockets/qwebsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QAbstractSocket \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkRequest \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkrequest.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkProxy \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkproxy.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkrequest.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonArray \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h \
+ /usr/include/qgis/qgssymbol.h /usr/include/qgis/qgsfeaturerequest.h \
  /usr/include/qgis/qgsfeatureiterator.h \
  /usr/include/qgis/qgssinglesymbolrenderer.h \
  /usr/include/qgis/qgsmarkersymbollayer.h \
@@ -709,7 +748,6 @@ CMakeFiles/GisDynamicClient.dir/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream \

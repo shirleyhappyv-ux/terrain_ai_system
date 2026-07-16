@@ -18,14 +18,10 @@
 #include <ogrsf_frmts.h>
 #include <cmath>
 #include <qgsmaptoolpan.h>
-#include <QCoreApplication>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setupUi();
     initGisLayers();
-
-    // 🌟 启动 API Server 服务（端口 9002）
-    m_apiServer = new GisApiServer(9002, this);
 }
 
 MainWindow::~MainWindow() {
@@ -35,6 +31,9 @@ MainWindow::~MainWindow() {
     }
 }
 
+// =================================================================
+// 🧼 UI 布局极致打磨版
+// =================================================================
 void MainWindow::setupUi() {
     this->setWindowTitle("GIS 核心检索与多准则空间选址系统");
     this->resize(1450, 850);
@@ -51,12 +50,14 @@ void MainWindow::setupUi() {
     QgsMapToolPan* panTool = new QgsMapToolPan(mCanvas);
     mCanvas->setMapTool(panTool);
 
+    // 右侧面板
     QWidget* rightPanel = new QWidget(this);
     QVBoxLayout* panelLayout = new QVBoxLayout(rightPanel);
     panelLayout->setContentsMargins(5, 5, 5, 5);
     panelLayout->setSpacing(4); 
     mainLayout->addWidget(rightPanel, 1);
 
+    // 地图视图操作按钮组
     panelLayout->addWidget(new QLabel("<b>[地图视图操作]</b>"));
     QHBoxLayout* layoutZoom = new QHBoxLayout();
     QPushButton* btnZoomIn = new QPushButton("🔍 放大", this);
@@ -67,6 +68,7 @@ void MainWindow::setupUi() {
     layoutZoom->addWidget(btnZoomOut);
     panelLayout->addLayout(layoutZoom);
 
+    // 模块 1：基础检索
     panelLayout->addWidget(new QLabel("<b>[功能模块 1] 基础搜索</b>"));
     QHBoxLayout* textSearchLayout = new QHBoxLayout();
     leTextSearch = new QLineEdit(this);
@@ -86,6 +88,7 @@ void MainWindow::setupUi() {
     panelLayout->addWidget(lblSimilarTitle);
     panelLayout->addWidget(listWidgetSimilarConfirm);
 
+    // 模块 2：动态选址网络
     panelLayout->addWidget(new QLabel("<b>[功能模块 2] 动态洞库空间多准则选址</b>"));
     
     leAreaMin = new QLineEdit("0.5", this);
@@ -94,23 +97,18 @@ void MainWindow::setupUi() {
     leSlopeIdeal = new QLineEdit("40", this); leRoughIdeal = new QLineEdit("200", this);
     leRoadDist = new QLineEdit("1500", this); leWaterDist = new QLineEdit("800", this);
 
-    QString inlineInputStyle = "height: 20px; font-size: 11px; border: 1px solid #BDC3C7; border-radius: 3px; font-weight: bold; text-align: center;";
-    leAreaMin->setStyleSheet(inlineInputStyle);leElevMin->setStyleSheet(inlineInputStyle); leElevMax->setStyleSheet(inlineInputStyle);
+    QString inlineInputStyle = "height: 20px; font-size: 11px; border: 1px solid #BDC3C7; border-radius: 3px; font-weight: bold;";
+    leAreaMin->setStyleSheet(inlineInputStyle);
+    leElevMin->setStyleSheet(inlineInputStyle); leElevMax->setStyleSheet(inlineInputStyle);
     leHeightIdeal->setStyleSheet(inlineInputStyle); leBiGaoIdeal->setStyleSheet(inlineInputStyle);
-    leSlopeIdeal->setStyleSheet(inlineInputStyle); leRoughIdeal->setStyleSheet(inlineInputStyle); // 🌟 确保这里也是正常的 setStyleSheet
+    leSlopeIdeal->setStyleSheet(inlineInputStyle); leRoughIdeal->setStyleSheet(inlineInputStyle);
     leRoadDist->setStyleSheet(inlineInputStyle); leWaterDist->setStyleSheet(inlineInputStyle);
 
+    leAreaMin->setAlignment(Qt::AlignCenter); leElevMin->setAlignment(Qt::AlignCenter); leElevMax->setAlignment(Qt::AlignCenter);
+    leHeightIdeal->setAlignment(Qt::AlignCenter); leBiGaoIdeal->setAlignment(Qt::AlignCenter);
+    leSlopeIdeal->setAlignment(Qt::AlignCenter); leRoughIdeal->setAlignment(Qt::AlignCenter);
+    leRoadDist->setAlignment(Qt::AlignCenter); leWaterDist->setAlignment(Qt::AlignCenter);
 
-    leAreaMin->setAlignment(Qt::AlignCenter); 
-    leElevMin->setAlignment(Qt::AlignCenter); 
-    leElevMax->setAlignment(Qt::AlignCenter);
-    leHeightIdeal->setAlignment(Qt::AlignCenter); 
-    leBiGaoIdeal->setAlignment(Qt::AlignCenter);
-    leSlopeIdeal->setAlignment(Qt::AlignCenter); 
-    leRoughIdeal->setAlignment(Qt::AlignCenter); 
-    leRoadDist->setAlignment(Qt::AlignCenter); 
-    leWaterDist->setAlignment(Qt::AlignCenter);
-    
     int inputWidth = 85;
     leAreaMin->setFixedWidth(inputWidth); 
     leHeightIdeal->setFixedWidth(inputWidth); leBiGaoIdeal->setFixedWidth(inputWidth);
@@ -231,16 +229,12 @@ void MainWindow::setupUi() {
 }
 
 void MainWindow::initGisLayers() {
-    // 🌟 核心修改：使用可移植相对路径，支持 Windows 绿色解压直接跑
-    QString baseDir = QCoreApplication::applicationDirPath();
-    
-    QString gpkgPath = baseDir + "/fixed_map_data.gpkg";
-    QString demPath  = baseDir + "/cqdem.tif";
+    QString gpkgPath = "/workspaces/terrain_ai_system/fixed_map_data.gpkg";
+    QString demPath  = "/workspaces/terrain_ai_system/cqdem.tif";
 
-    if (!QFile::exists(gpkgPath)) gpkgPath = baseDir + "/../fixed_map_data.gpkg";
-    if (!QFile::exists(demPath))  demPath  = baseDir + "/../cqdem.tif";
     QgsVectorLayer::LayerOptions opts; opts.loadDefaultStyle = false;
 
+    // 1. 初始化高亮标注内存图层
     mMarkLayer = new QgsVectorLayer("Point?crs=EPSG:4326&field=name:string", "Selection_Marks", "memory");
     QgsSimpleMarkerSymbolLayer* starSymbol = new QgsSimpleMarkerSymbolLayer();
     starSymbol->setShape(Qgis::MarkerShape::Star); starSymbol->setColor(Qt::yellow); starSymbol->setSize(11.0);
@@ -249,10 +243,22 @@ void MainWindow::initGisLayers() {
 
     GDALAllRegister();
     
+    // 打开 DEM 文件句柄，仅供后台计算使用，不上屏渲染遮挡矢量图
     mDemDataset = (GDALDataset*)GDALOpen(demPath.toUtf8().constData(), GA_ReadOnly);
 
     QList<QgsMapLayer*> allLoadedLayers;
+    
+    // 🌟【关键修复】：不再把 mDemRasterLayer 加入渲染队列，防止黑灰色栅格遮挡彩色矢量地图
+    /*
+    if (QFile::exists(demPath)) {
+        mDemRasterLayer = new QgsRasterLayer(demPath, "CQ_DEM_Raster", "gdal");
+        if (mDemRasterLayer && mDemRasterLayer->isValid()) {
+            allLoadedLayers.append(mDemRasterLayer);
+        }
+    }
+    */
 
+    // 2. 动态扫描 GPKG 物理矢量图层（包含鲜艳的道路线、建筑面、行政区面）
     mRoadsLayer = nullptr;
     mPlacesLayer = nullptr;
     mPoisLayer = nullptr;
@@ -293,8 +299,10 @@ void MainWindow::initGisLayers() {
     if (!mPlacesLayer && allLoadedLayers.size() > 0) mPlacesLayer = qobject_cast<QgsVectorLayer*>(allLoadedLayers.at(0));
     if (!mPoisLayer && allLoadedLayers.size() > 0) mPoisLayer = qobject_cast<QgsVectorLayer*>(allLoadedLayers.at(0));
 
+    // 🌟 3. 标注图层置顶
     allLoadedLayers.append(mMarkLayer);
 
+    // 4. 加载并更新画布渲染
     QgsProject::instance()->addMapLayers(allLoadedLayers);
     mCanvas->setLayers(allLoadedLayers);
     mCanvas->zoomToFullExtent(); 
@@ -356,6 +364,7 @@ double MainWindow::CalculateMetricScore(double value, double opt_min, double opt
 void MainWindow::zoomInMap() { if (mCanvas) mCanvas->zoomIn(); }
 void MainWindow::zoomOutMap() { if (mCanvas) mCanvas->zoomOut(); }
 
+// 模块 1 搜索解算
 void MainWindow::executeTextSearch() {
     tableWidgetConfirm->setRowCount(0);      
     listWidgetSimilarConfirm->clear();       
@@ -593,6 +602,7 @@ void MainWindow::executeTextSearch() {
     }
 }
 
+// 选址解算逻辑（完全还原）
 void MainWindow::executeTunnelSiteSelection() {
     tableWidgetConfirm->setRowCount(0); 
     listWidgetSimilarConfirm->clear();
@@ -957,31 +967,15 @@ void MainWindow::handleTableDoubleClicked(int row, int column) {
     QString coordX = QString::number(centerPt.x(), 'f', 4);
     QString coordY = QString::number(centerPt.y(), 'f', 4);
 
-    tokens = target.details.split(" | ");
-    QString mName = tokens[0].split(":").last();
-    QString totalScore = tokens[3].split(":").last(); 
-    
-    QString targetDistrict = "重庆市辖区";
-    if (tokens.size() > 10) {
-        targetDistrict = tokens[10].split(":").last();
-    }
-
-    // 🌟【关键动作】：本地双击聚焦后，自动向对方软件广播此点坐标
-    if (m_apiServer) {
-        m_apiServer->broadcastFocusLocation(
-            target.name,
-            centerPt.x(),
-            centerPt.y(),
-            totalScore.toDouble(),
-            targetDistrict
-        );
-    }
-
     if (!target.isMcdaResult) {
         lblStatus->setText(QString("目标已平滑定位至人工要素 [%1]，开启原生标注，无弹窗。").arg(target.name));
         return; 
     }
 
+    tokens = target.details.split(" | ");
+    QString mName = tokens[0].split(":").last();
+    QString totalScore = tokens[3].split(":").last(); 
+    
     QString valHeight = tokens[4].split(":").last() + " m";
     QString valBiGao  = tokens[5].split(":").last() + " m";
     QString valSlope  = tokens[6].split(":").last() + " °";
@@ -1011,10 +1005,7 @@ void MainWindow::handleTableDoubleClicked(int row, int column) {
 
 bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
     if (obj == leTextSearch && (event->type() == QEvent::FocusIn || event->type() == QEvent::MouseButtonPress)) {
-        QFile file(QCoreApplication::applicationDirPath() + "/paste.txt");
-        if (!file.exists()) {
-            file.setFileName("/workspaces/terrain_ai_system/paste.txt");
-        }
+        QFile file("/workspaces/terrain_ai_system/paste.txt");
         if (file.open(QIODevice::ReadOnly)) {
             QByteArray rawBytes = file.readAll().trimmed(); 
             file.close();

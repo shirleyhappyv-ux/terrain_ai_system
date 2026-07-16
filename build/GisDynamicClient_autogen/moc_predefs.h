@@ -1,5 +1,3 @@
-ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libqgis_core.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
-ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libqgis_core.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
 #define __DBL_MIN_EXP__ (-1021)
 #define __cpp_nontype_template_parameter_auto 201606L
 #define __UINT_LEAST16_MAX__ 0xffff
@@ -303,6 +301,7 @@ ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libqgis_core.so' from LD_PRELOAD
 #define __INT_LEAST16_MAX__ 0x7fff
 #define __FLT16_NORM_MAX__ 6.55040000000000000000000000000000000e+4F16
 #define __DEC64_MANT_DIG__ 16
+#define QT_NETWORK_LIB 1
 #define __FLT32_DENORM_MIN__ 1.40129846432481707092372958328991613e-45F32
 #define __SIG_ATOMIC_WIDTH__ 32
 #define __INT_LEAST64_TYPE__ long int
@@ -351,6 +350,7 @@ ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libqgis_core.so' from LD_PRELOAD
 #define __FLT64X_MAX_EXP__ 16384
 #define __UINT_FAST64_TYPE__ long unsigned int
 #define __cpp_inline_variables 201606L
+#define QT_WEBSOCKETS_LIB 1
 #define __BFLT16_MIN_EXP__ (-125)
 #define __INT_MAX__ 0x7fffffff
 #define __linux__ 1
