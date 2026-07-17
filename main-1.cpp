@@ -1,6 +1,3 @@
-// =================================================================
-// 文件路径：/workspaces/terrain_ai_system/main.cpp
-// =================================================================
 #include <qgsapplication.h>
 #include <qgsproviderregistry.h>
 #include "mainwindow.h"
