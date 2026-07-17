@@ -655,8 +655,6 @@ CMakeFiles/GisDynamicClient.dir/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
  /usr/include/qgis/qgsdatasourceuri.h /usr/include/gdal/gdal_priv.h \
  /usr/include/gdal/gdal.h /usr/include/gdal/gdal_version.h \
  /usr/include/gdal/cpl_port.h /usr/include/gdal/cpl_config.h \
@@ -695,4 +693,7 @@ CMakeFiles/GisDynamicClient.dir/mainwindow.cpp.o: \
  /usr/include/gdal/cpl_json.h /usr/include/gdal/ogr_spatialref.h \
  /usr/include/gdal/ogr_srs_api.h /usr/include/gdal/ogrsf_frmts.h \
  /usr/include/gdal/gdal_priv.h /usr/include/c++/13/deque \
- /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc
+ /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
+ /usr/include/qgis/qgsmaptoolpan.h /usr/include/qgis/qgsmaptool.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QCursor \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
