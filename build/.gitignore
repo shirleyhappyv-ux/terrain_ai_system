@@ -1,0 +1,17 @@
+# 忽略所有地图大文件及空间数据库
+*.gpkg
+*.gpkg-journal
+*.dem
+*.tif
+*.tiff
+*.shp
+*.dbf
+*.prj
+*.shx
+
+# 忽略本地编译出的可执行程序和临时文件
+QT-1
+*.o
+*.a
+*.so
+.DS_Store

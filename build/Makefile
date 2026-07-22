@@ -179,30 +179,6 @@ GisDynamicClient_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GisDynamicClient.dir/build.make CMakeFiles/GisDynamicClient.dir/GisDynamicClient_autogen/mocs_compilation.cpp.s
 .PHONY : GisDynamicClient_autogen/mocs_compilation.cpp.s
 
-custom_map_tools.o: custom_map_tools.cpp.o
-.PHONY : custom_map_tools.o
-
-# target to build an object file
-custom_map_tools.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GisDynamicClient.dir/build.make CMakeFiles/GisDynamicClient.dir/custom_map_tools.cpp.o
-.PHONY : custom_map_tools.cpp.o
-
-custom_map_tools.i: custom_map_tools.cpp.i
-.PHONY : custom_map_tools.i
-
-# target to preprocess a source file
-custom_map_tools.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GisDynamicClient.dir/build.make CMakeFiles/GisDynamicClient.dir/custom_map_tools.cpp.i
-.PHONY : custom_map_tools.cpp.i
-
-custom_map_tools.s: custom_map_tools.cpp.s
-.PHONY : custom_map_tools.s
-
-# target to generate assembly for a file
-custom_map_tools.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GisDynamicClient.dir/build.make CMakeFiles/GisDynamicClient.dir/custom_map_tools.cpp.s
-.PHONY : custom_map_tools.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -265,9 +241,6 @@ help:
 	@echo "... GisDynamicClient_autogen/mocs_compilation.o"
 	@echo "... GisDynamicClient_autogen/mocs_compilation.i"
 	@echo "... GisDynamicClient_autogen/mocs_compilation.s"
-	@echo "... custom_map_tools.o"
-	@echo "... custom_map_tools.i"
-	@echo "... custom_map_tools.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "GisDynamicClient_autogen/timestamp" "custom" "GisDynamicClient_autogen/deps"
   "/workspaces/terrain_ai_system/build/GisDynamicClient_autogen/mocs_compilation.cpp" "CMakeFiles/GisDynamicClient.dir/GisDynamicClient_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/GisDynamicClient.dir/GisDynamicClient_autogen/mocs_compilation.cpp.o.d"
-  "/workspaces/terrain_ai_system/custom_map_tools.cpp" "CMakeFiles/GisDynamicClient.dir/custom_map_tools.cpp.o" "gcc" "CMakeFiles/GisDynamicClient.dir/custom_map_tools.cpp.o.d"
   "/workspaces/terrain_ai_system/main.cpp" "CMakeFiles/GisDynamicClient.dir/main.cpp.o" "gcc" "CMakeFiles/GisDynamicClient.dir/main.cpp.o.d"
   "/workspaces/terrain_ai_system/mainwindow.cpp" "CMakeFiles/GisDynamicClient.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/GisDynamicClient.dir/mainwindow.cpp.o.d"
   )

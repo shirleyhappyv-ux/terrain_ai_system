@@ -631,31 +631,30 @@ CMakeFiles/GisDynamicClient.dir/mainwindow.cpp.o: \
  /usr/include/qgis/qgseditformconfig.h \
  /usr/include/qgis/qgsattributetableconfig.h \
  /usr/include/qgis/qgsabstractprofilesource.h \
- /usr/include/qgis/qgsproject.h /usr/include/qgis/qgssymbol.h \
- /usr/include/qgis/qgsfeaturerequest.h \
- /usr/include/qgis/qgsfeatureiterator.h \
- /usr/include/qgis/qgssinglesymbolrenderer.h \
- /usr/include/qgis/qgsmarkersymbollayer.h \
- /usr/include/qgis/qgssymbollayer.h \
- /usr/include/qgis/qgssymbolrendercontext.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
+ /usr/include/qgis/qgsrasterlayer.h \
+ /usr/include/qgis/qgsrasterdataprovider.h \
+ /usr/include/qgis/qgscolorrampshader.h \
+ /usr/include/qgis/qgsrastershaderfunction.h \
+ /usr/include/qgis/qgscolorramplegendnodesettings.h \
+ /usr/include/qgis/qgsrasterattributetable.h \
+ /usr/include/qgis/qgscolorrampimpl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QGradient \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygonF \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
- /usr/include/qgis/qgsdatasourceuri.h /usr/include/gdal/gdal_priv.h \
+ /usr/include/qgis/qgscolorramp.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QLinearGradient \
+ /usr/include/qgis/qgsrasterinterface.h \
+ /usr/include/qgis/qgsrasterbandstats.h \
+ /usr/include/qgis/qgsrasterblock.h /usr/include/qgis/qgsrasterrange.h \
+ /usr/include/qgis/qgsrasterhistogram.h \
+ /usr/include/qgis/qgsrasterpyramid.h \
+ /usr/include/qgis/qgsrasteriterator.h \
+ /usr/include/qgis/qgsrasterdataprovidertemporalcapabilities.h \
+ /usr/include/qgis/qgsrasterdataproviderelevationproperties.h \
+ /usr/include/qgis/qgsdataproviderelevationproperties.h \
+ /usr/include/qgis/qgsrasterviewport.h \
+ /usr/include/qgis/qgsrasterminmaxorigin.h \
+ /usr/include/qgis/qgscontrastenhancement.h /usr/include/qgis/qgsraster.h \
+ /usr/include/qgis/qgsproject.h /usr/include/gdal/gdal_priv.h \
  /usr/include/gdal/gdal.h /usr/include/gdal/gdal_version.h \
  /usr/include/gdal/cpl_port.h /usr/include/gdal/cpl_config.h \
  /usr/include/c++/13/math.h /usr/include/gdal/cpl_error.h \
@@ -691,7 +690,33 @@ CMakeFiles/GisDynamicClient.dir/mainwindow.cpp.o: \
  /usr/include/gdal/cpl_atomic_ops.h /usr/include/gdal/ogr_feature.h \
  /usr/include/gdal/ogr_featurestyle.h /usr/include/gdal/ogr_geometry.h \
  /usr/include/gdal/cpl_json.h /usr/include/gdal/ogr_spatialref.h \
- /usr/include/gdal/ogr_srs_api.h /usr/include/gdal/ogrsf_frmts.h \
+ /usr/include/gdal/ogr_srs_api.h /usr/include/qgis/qgssymbol.h \
+ /usr/include/qgis/qgsfeaturerequest.h \
+ /usr/include/qgis/qgsfeatureiterator.h \
+ /usr/include/qgis/qgssinglesymbolrenderer.h \
+ /usr/include/qgis/qgsmarkersymbollayer.h \
+ /usr/include/qgis/qgssymbollayer.h \
+ /usr/include/qgis/qgssymbolrendercontext.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygonF \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
+ /usr/include/qgis/qgspallabeling.h \
+ /usr/include/qgis/qgsvectorlayerlabeling.h \
+ /usr/include/qgis/qgstextformat.h /usr/include/qgis/qgsdistancearea.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h \
+ /usr/include/qgis/qgsdatasourceuri.h /usr/include/gdal/ogrsf_frmts.h \
  /usr/include/gdal/gdal_priv.h /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /usr/include/qgis/qgsmaptoolpan.h /usr/include/qgis/qgsmaptool.h \

@@ -641,6 +641,65 @@ CMakeFiles/GisDynamicClient.dir/main.cpp.o: \
  /usr/include/qgis/qgseditformconfig.h \
  /usr/include/qgis/qgsattributetableconfig.h \
  /usr/include/qgis/qgsabstractprofilesource.h \
- /usr/include/qgis/qgsproject.h \
+ /usr/include/qgis/qgsrasterlayer.h \
+ /usr/include/qgis/qgsrasterdataprovider.h \
+ /usr/include/qgis/qgscolorrampshader.h \
+ /usr/include/qgis/qgsrastershaderfunction.h \
+ /usr/include/qgis/qgscolorramplegendnodesettings.h \
+ /usr/include/qgis/qgsrasterattributetable.h \
+ /usr/include/qgis/qgscolorrampimpl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QGradient \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
+ /usr/include/qgis/qgscolorramp.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QLinearGradient \
+ /usr/include/qgis/qgsrasterinterface.h \
+ /usr/include/qgis/qgsrasterbandstats.h \
+ /usr/include/qgis/qgsrasterblock.h /usr/include/qgis/qgsrasterrange.h \
+ /usr/include/qgis/qgsrasterhistogram.h \
+ /usr/include/qgis/qgsrasterpyramid.h \
+ /usr/include/qgis/qgsrasteriterator.h \
+ /usr/include/qgis/qgsrasterdataprovidertemporalcapabilities.h \
+ /usr/include/qgis/qgsrasterdataproviderelevationproperties.h \
+ /usr/include/qgis/qgsdataproviderelevationproperties.h \
+ /usr/include/qgis/qgsrasterviewport.h \
+ /usr/include/qgis/qgsrasterminmaxorigin.h \
+ /usr/include/qgis/qgscontrastenhancement.h /usr/include/qgis/qgsraster.h \
+ /usr/include/qgis/qgsproject.h /usr/include/gdal/gdal_priv.h \
+ /usr/include/gdal/gdal.h /usr/include/gdal/gdal_version.h \
+ /usr/include/gdal/cpl_port.h /usr/include/gdal/cpl_config.h \
+ /usr/include/c++/13/math.h /usr/include/gdal/cpl_error.h \
+ /usr/include/gdal/cpl_progress.h /usr/include/gdal/cpl_virtualmem.h \
+ /usr/include/gdal/cpl_vsi.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
+ /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h \
+ /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+ /usr/include/gdal/cpl_minixml.h /usr/include/gdal/ogr_api.h \
+ /usr/include/gdal/ogr_core.h /usr/include/gdal/gdal_frmts.h \
+ /usr/include/gdal/gdalsubdatasetinfo.h /usr/include/gdal/cpl_conv.h \
+ /usr/include/gdal/cpl_string.h /usr/include/gdal/cpl_multiproc.h \
+ /usr/include/gdal/cpl_atomic_ops.h /usr/include/gdal/ogr_feature.h \
+ /usr/include/gdal/ogr_featurestyle.h /usr/include/gdal/ogr_geometry.h \
+ /usr/include/gdal/cpl_json.h /usr/include/gdal/ogr_spatialref.h \
+ /usr/include/gdal/ogr_srs_api.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h

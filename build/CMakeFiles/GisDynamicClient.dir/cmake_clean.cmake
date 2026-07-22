@@ -4,8 +4,6 @@ file(REMOVE_RECURSE
   "GisDynamicClient_autogen"
   "CMakeFiles/GisDynamicClient.dir/GisDynamicClient_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/GisDynamicClient.dir/GisDynamicClient_autogen/mocs_compilation.cpp.o.d"
-  "CMakeFiles/GisDynamicClient.dir/custom_map_tools.cpp.o"
-  "CMakeFiles/GisDynamicClient.dir/custom_map_tools.cpp.o.d"
   "CMakeFiles/GisDynamicClient.dir/main.cpp.o"
   "CMakeFiles/GisDynamicClient.dir/main.cpp.o.d"
   "CMakeFiles/GisDynamicClient.dir/mainwindow.cpp.o"

@@ -207,14 +207,20 @@ GisDynamicClient_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 GisDynamicClient_SOURCE_DIR:STATIC=/workspaces/terrain_ai_system
 
+//Path to a library.
+QGIS_CORE_LIBRARY:FILEPATH=/usr/lib/libqgis_core.so
+
+//Path to a library.
+QGIS_GUI_LIBRARY:FILEPATH=/usr/lib/libqgis_gui.so
+
+//Path to a file.
+QGIS_INCLUDE_DIR:PATH=/usr/include/qgis
+
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
 
 //The directory containing a CMake configuration file for Qt5Gui.
 Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
-
-//The directory containing a CMake configuration file for Qt5Network.
-Qt5Network_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Network
 
 //The directory containing a CMake configuration file for Qt5Svg.
 Qt5Svg_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Svg

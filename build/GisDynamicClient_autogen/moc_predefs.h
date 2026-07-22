@@ -1,3 +1,5 @@
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libqgis_core.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libqgis_core.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
 #define __DBL_MIN_EXP__ (-1021)
 #define __cpp_nontype_template_parameter_auto 201606L
 #define __UINT_LEAST16_MAX__ 0xffff

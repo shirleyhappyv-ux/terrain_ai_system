@@ -2,39 +2,30 @@ cmake_minimum_required(VERSION 3.16)
 project(GisDynamicClient LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTORCC ON)
 
-# 查找 Qt5 核心模块，新加了 Svg 模块
-find_package(Qt5 COMPONENTS Core Gui Widgets Xml Svg REQUIRED)
+# 🌟 切换为与 QGIS 3.34 完全兼容的 Qt5
+find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Xml Svg)
 
-# 查找 GDAL 依赖
+find_path(QGIS_INCLUDE_DIR qgsapplication.h PATHS /usr/include/qgis)
+find_library(QGIS_CORE_LIBRARY NAMES qgis_core PATHS /usr/lib)
+find_library(QGIS_GUI_LIBRARY NAMES qgis_gui PATHS /usr/lib)
 find_package(GDAL REQUIRED)
 
-
-include_directories(
-    /usr/include/qgis
-    ${GDAL_INCLUDE_DIR}
-)
-# =============================================================
-
-# QGIS 核心动态库
-set(QGIS_LIBRARIES qgis_core qgis_gui qgis_analysis)
+include_directories(${QGIS_INCLUDE_DIR} ${GDAL_INCLUDE_DIRS})
 
 add_executable(GisDynamicClient
     main.cpp
-    mainwindow.cpp
     mainwindow.h
-    custom_map_tools.cpp
-    custom_map_tools.h
+    mainwindow.cpp
 )
- 
-target_link_libraries(GisDynamicClient
-    Qt5::Widgets
-    Qt5::Xml
-    Qt5::Svg
+
+target_link_libraries(GisDynamicClient PRIVATE
+    Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Svg
+    ${QGIS_CORE_LIBRARY}
+    ${QGIS_GUI_LIBRARY}
     ${GDAL_LIBRARIES}
-    ${QGIS_LIBRARIES}
 )
-# =============================================================

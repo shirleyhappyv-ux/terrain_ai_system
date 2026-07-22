@@ -143,6 +143,7 @@
   /usr/include/c++/13/limits \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
+  /usr/include/c++/13/math.h \
   /usr/include/c++/13/memory \
   /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
@@ -182,6 +183,30 @@
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/gdal/cpl_atomic_ops.h \
+  /usr/include/gdal/cpl_config.h \
+  /usr/include/gdal/cpl_conv.h \
+  /usr/include/gdal/cpl_error.h \
+  /usr/include/gdal/cpl_json.h \
+  /usr/include/gdal/cpl_minixml.h \
+  /usr/include/gdal/cpl_multiproc.h \
+  /usr/include/gdal/cpl_port.h \
+  /usr/include/gdal/cpl_progress.h \
+  /usr/include/gdal/cpl_string.h \
+  /usr/include/gdal/cpl_virtualmem.h \
+  /usr/include/gdal/cpl_vsi.h \
+  /usr/include/gdal/gdal.h \
+  /usr/include/gdal/gdal_frmts.h \
+  /usr/include/gdal/gdal_priv.h \
+  /usr/include/gdal/gdal_version.h \
+  /usr/include/gdal/gdalsubdatasetinfo.h \
+  /usr/include/gdal/ogr_api.h \
+  /usr/include/gdal/ogr_core.h \
+  /usr/include/gdal/ogr_feature.h \
+  /usr/include/gdal/ogr_featurestyle.h \
+  /usr/include/gdal/ogr_geometry.h \
+  /usr/include/gdal/ogr_spatialref.h \
+  /usr/include/gdal/ogr_srs_api.h \
   /usr/include/linux/errno.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
@@ -199,13 +224,19 @@
   /usr/include/qgis/qgsattributes.h \
   /usr/include/qgis/qgsattributetableconfig.h \
   /usr/include/qgis/qgsbox3d.h \
+  /usr/include/qgis/qgscolorramp.h \
+  /usr/include/qgis/qgscolorrampimpl.h \
+  /usr/include/qgis/qgscolorramplegendnodesettings.h \
+  /usr/include/qgis/qgscolorrampshader.h \
   /usr/include/qgis/qgscolorscheme.h \
   /usr/include/qgis/qgsconfig.h \
+  /usr/include/qgis/qgscontrastenhancement.h \
   /usr/include/qgis/qgscoordinatereferencesystem.h \
   /usr/include/qgis/qgscoordinatetransform.h \
   /usr/include/qgis/qgscoordinatetransformcontext.h \
   /usr/include/qgis/qgscustomdrophandler.h \
   /usr/include/qgis/qgsdataprovider.h \
+  /usr/include/qgis/qgsdataproviderelevationproperties.h \
   /usr/include/qgis/qgsdataprovidertemporalcapabilities.h \
   /usr/include/qgis/qgsdatasourceuri.h \
   /usr/include/qgis/qgsdatetimestatisticalsummary.h \
@@ -280,6 +311,22 @@
   /usr/include/qgis/qgsproperty.h \
   /usr/include/qgis/qgspropertycollection.h \
   /usr/include/qgis/qgsrange.h \
+  /usr/include/qgis/qgsraster.h \
+  /usr/include/qgis/qgsrasterattributetable.h \
+  /usr/include/qgis/qgsrasterbandstats.h \
+  /usr/include/qgis/qgsrasterblock.h \
+  /usr/include/qgis/qgsrasterdataprovider.h \
+  /usr/include/qgis/qgsrasterdataproviderelevationproperties.h \
+  /usr/include/qgis/qgsrasterdataprovidertemporalcapabilities.h \
+  /usr/include/qgis/qgsrasterhistogram.h \
+  /usr/include/qgis/qgsrasterinterface.h \
+  /usr/include/qgis/qgsrasteriterator.h \
+  /usr/include/qgis/qgsrasterlayer.h \
+  /usr/include/qgis/qgsrasterminmaxorigin.h \
+  /usr/include/qgis/qgsrasterpyramid.h \
+  /usr/include/qgis/qgsrasterrange.h \
+  /usr/include/qgis/qgsrastershaderfunction.h \
+  /usr/include/qgis/qgsrasterviewport.h \
   /usr/include/qgis/qgsreadwritecontext.h \
   /usr/include/qgis/qgsrectangle.h \
   /usr/include/qgis/qgsrelation.h \
@@ -353,9 +400,13 @@
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
@@ -380,6 +431,8 @@
   /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
@@ -550,8 +603,10 @@
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QFont \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QFontDatabase \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QGradient \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QImage \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QLinearGradient \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainterPath \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QPicture \
@@ -648,10 +703,12 @@
   /usr/include/x86_64-linux-gnu/qt5/QtXml/qtxml-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtXml/qtxmlglobal.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
